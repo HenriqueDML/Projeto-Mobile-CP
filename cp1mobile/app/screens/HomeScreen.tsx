@@ -113,7 +113,7 @@ export default function HomeScreen() {
         <View style={styles.rodape}>
           <Text style={styles.rodapeTexto}>
             FIAP - Validador de Notas{"\n"}
-            Avenida Lins de Vasconcelos, 1222 - Aclimação, São Paulo‎
+            Avenida Paulista, 1106, 7º andar, Cerqueira César, São Paulo/SP‎
           </Text>
         </View>
       </KeyboardAvoidingView>
