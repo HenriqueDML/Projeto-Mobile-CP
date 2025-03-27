@@ -1,5 +1,11 @@
 # FIAP - Calculadora de Nota
 
+## PROJETO RODANDO:
+![imgcp](https://github.com/user-attachments/assets/59f22885-c11d-415e-80c2-cb31dfff5736)
+
+## VIDEO DO PROJETO
+Link: https://www.youtube.com/watch?v=ShuZoJFo3iM
+
 ## GRUPO:
 - **RM: 558062 - Henrique Garcia**
 - **RM: 557197 - Larissa Muniz**
