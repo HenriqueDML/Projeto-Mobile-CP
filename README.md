@@ -4,7 +4,7 @@
 ![imgcp](https://github.com/user-attachments/assets/646125e7-fb8b-4622-9f4b-7958d01651d6)
 
 ## VIDEO DO PROJETO
-Link: https://www.youtube.com/watch?v=ShuZoJFo3iM
+Link: [https://www.youtube.com/watch?v=ShuZoJFo3iM](https://youtu.be/70oOyAaBtaA)
 
 ## GRUPO:
 - **RM: 558062 - Henrique Garcia**
