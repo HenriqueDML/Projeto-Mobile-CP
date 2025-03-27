@@ -1,7 +1,7 @@
 # FIAP - Calculadora de Nota
 
 ## PROJETO RODANDO:
-![imgcp](https://github.com/user-attachments/assets/59f22885-c11d-415e-80c2-cb31dfff5736)
+![imgcp](https://github.com/user-attachments/assets/646125e7-fb8b-4622-9f4b-7958d01651d6)
 
 ## VIDEO DO PROJETO
 Link: https://www.youtube.com/watch?v=ShuZoJFo3iM
