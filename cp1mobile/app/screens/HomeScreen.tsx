@@ -15,6 +15,14 @@ import HmInput from "../../components/HmInput";
 import HmButton from "../../components/HmButton";
 
 export default function HomeScreen() {
+  function hgResetarCampos() {
+    sethgNota1("");
+    sethgNota2("");
+    sethgNota3("");
+    sethgFaltas("");
+    sethgResultado("");
+  }
+
   const [hmNota1, setHmNota1] = useState("");
   const [hmNota2, setHmNota2] = useState("");
   const [hmNota3, setHmNota3] = useState("");
@@ -67,7 +75,7 @@ export default function HomeScreen() {
             style={styles.logoContainer}
           >
             <Image
-              source={require("../../assets/images/fiap.png")}
+              source={require("../../assets/fiap.png")} onTouchEnd={hgResetarCampos}
               style={styles.logo}
             />
           </TouchableOpacity>
