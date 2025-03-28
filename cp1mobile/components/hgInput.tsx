@@ -1,11 +1,11 @@
 
 import { View, Text, TextInput, StyleSheet, TextInputProps } from 'react-native';
 
-interface HmInputProps extends TextInputProps {
+interface hgInputProps extends TextInputProps {
   label: string;
 }
 
-export default function HmInput({ label, ...props }: HmInputProps) {
+export default function hgInput({ label, ...props }: hgInputProps) {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>

@@ -1,3 +1,6 @@
+import HgInput from "../../components/hgInput";
+import HgButton from "../../components/hgButton";
+
 import { useState } from "react";
 import {
   View,
@@ -11,8 +14,6 @@ import {
   SafeAreaView,
   Linking,
 } from "react-native";
-import HmInput from "../../components/HmInput";
-import HmButton from "../../components/HmButton";
 
 export default function HomeScreen() {
   function hgResetarCampos() {
@@ -23,17 +24,17 @@ export default function HomeScreen() {
     sethgResultado("");
   }
 
-  const [hmNota1, setHmNota1] = useState("");
-  const [hmNota2, setHmNota2] = useState("");
-  const [hmNota3, setHmNota3] = useState("");
-  const [hmFaltas, setHmFaltas] = useState("");
-  const [hmResultado, setHmResultado] = useState("");
+  const [hgNota1, sethgNota1] = useState("");
+  const [hgNota2, sethgNota2] = useState("");
+  const [hgNota3, sethgNota3] = useState("");
+  const [hgFaltas, sethgFaltas] = useState("");
+  const [hgResultado, sethgResultado] = useState("");
 
-  const hmValidar = () => {
-    const nota1 = parseFloat(hmNota1) || 0;
-    const nota2 = parseFloat(hmNota2) || 0;
-    const nota3 = parseFloat(hmNota3) || 0;
-    const faltas = parseInt(hmFaltas) || 0;
+  const hgValidar = () => {
+    const nota1 = parseFloat(hgNota1) || 0;
+    const nota2 = parseFloat(hgNota2) || 0;
+    const nota3 = parseFloat(hgNota3) || 0;
+    const faltas = parseInt(hgFaltas) || 0;
 
     const limiteFaltas = 25;
     const notas = [nota1, nota2, nota3];
@@ -41,22 +42,22 @@ export default function HomeScreen() {
     const media = (notas.reduce((a, b) => a + b) - menorNota) / 2;
 
     if (media < 7 && faltas > limiteFaltas) {
-      setHmResultado(`Reprovado por nota. Média: ${media.toFixed(2)}`);
+      sethgResultado(`Reprovado por nota. Média: ${media.toFixed(2)}`);
     } else if (faltas > limiteFaltas) {
-      setHmResultado(`Reprovado por falta. Média: ${media.toFixed(2)}`);
+      sethgResultado(`Reprovado por falta. Média: ${media.toFixed(2)}`);
     } else if (media < 7) {
-      setHmResultado(`Reprovado por nota. Média: ${media.toFixed(2)}`);
+      sethgResultado(`Reprovado por nota. Média: ${media.toFixed(2)}`);
     } else {
-      setHmResultado(`Aprovado com média de ${media.toFixed(2)}`);
+      sethgResultado(`Aprovado com média de ${media.toFixed(2)}`);
     }
   };
 
   const hmResetar = () => {
-    setHmNota1("");
-    setHmNota2("");
-    setHmNota3("");
-    setHmFaltas("");
-    setHmResultado("");
+    sethgNota1("");
+    sethgNota2("");
+    sethgNota3("");
+    sethgFaltas("");
+    sethgResultado("");
   };
 
   const abrirSiteFiap = () => {
@@ -75,7 +76,8 @@ export default function HomeScreen() {
             style={styles.logoContainer}
           >
             <Image
-              source={require("../../assets/fiap.png")} onTouchEnd={hgResetarCampos}
+              source={require("../../assets/fiap.png")}
+              onTouchEnd={hgResetarCampos}
               style={styles.logo}
             />
           </TouchableOpacity>
@@ -85,35 +87,35 @@ export default function HomeScreen() {
         <ScrollView contentContainerStyle={styles.scroll}>
           <View style={styles.inputContainer}>
             <Text style={styles.label}></Text>
-            <HmInput
+            <HgInput
               label="Nota 1:"
               keyboardType="decimal-pad"
-              value={hmNota1}
-              onChangeText={setHmNota1}
+              value={hgNota1}
+              onChangeText={sethgNota1}
             />
-            <HmInput
+            <HgInput
               label="Nota 2:"
               keyboardType="decimal-pad"
-              value={hmNota2}
-              onChangeText={setHmNota2}
+              value={hgNota2}
+              onChangeText={sethgNota2}
             />
-            <HmInput
+            <HgInput
               label="Nota 3:"
               keyboardType="decimal-pad"
-              value={hmNota3}
-              onChangeText={setHmNota3}
+              value={hgNota3}
+              onChangeText={sethgNota3}
             />
-            <HmInput
+            <HgInput
               label="Faltas:"
               keyboardType="numeric"
-              value={hmFaltas}
-              onChangeText={setHmFaltas}
+              value={hgFaltas}
+              onChangeText={sethgFaltas}
             />
 
-            <HmButton title="Validar" onPress={hmValidar} />
+            <HgButton title="Validar" onPress={hgValidar} />
 
-            {hmResultado !== "" && (
-              <Text style={styles.resultado}>{hmResultado}</Text>
+            {hgResultado !== "" && (
+              <Text style={styles.resultado}>{hgResultado}</Text>
             )}
           </View>
         </ScrollView>

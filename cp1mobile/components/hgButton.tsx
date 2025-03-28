@@ -1,12 +1,12 @@
 
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
-interface HmButtonProps {
+interface hgButtonProps {
   title: string;
   onPress: () => void;
 }
 
-export default function HmButton({ title, onPress }: HmButtonProps) {
+export default function hgButton({ title, onPress }: hgButtonProps) {
   return (
     <TouchableOpacity style={styles.botao} onPress={onPress}>
       <Text style={styles.botaoTexto}>{title}</Text>
